@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "WPILib"
+        setUrl("https://frcmaven.wpi.edu/artifactory/release")
+    }
+}
+
+dependencies {
+    compileOnly group: "edu.wpi.first.shuffleboard", name: "api", version: "2020.3.2"
+}
+
+javafx {
+    version = "14"
+    modules = [ 'javafx.controls' ]
+}
